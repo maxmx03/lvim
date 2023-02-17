@@ -103,4 +103,13 @@ lvim.plugins = {
   {
     'stevearc/dressing.nvim',
   },
+  {
+    'nvim-treesitter/playground',
+    config = function()
+      local opts = { noremap = true, silent = true }
+
+      vim.keymap.set('n', '<F7>', ':TSPlaygroundToggle<cr>', opts)
+      vim.keymap.set('n', '<F8>', ':TSHighlightCapturesUnderCursor<cr>', opts)
+    end,
+  },
 }
