@@ -1,12 +1,13 @@
 lvim.plugins = {
   {
     'maxmx03/solarized.nvim',
+    branch = '5-change-background-without-restarting-neovim',
     config = function()
       local s = require 'solarized'
 
       s.setup {
         theme = 'neovim',
-        transparent = true,
+        transparent = false,
       }
 
       local c = s.colors
@@ -111,5 +112,13 @@ lvim.plugins = {
       vim.keymap.set('n', '<F7>', ':TSPlaygroundToggle<cr>', opts)
       vim.keymap.set('n', '<F8>', ':TSHighlightCapturesUnderCursor<cr>', opts)
     end,
+  },
+  {
+    'iamcco/markdown-preview.nvim',
+    build = 'cd app && yarn',
+    config = function()
+      vim.g.mkdp_filetypes = { 'markdown' }
+    end,
+    ft = { 'markdown' },
   },
 }
