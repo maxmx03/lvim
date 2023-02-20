@@ -1,16 +1,16 @@
 lvim.plugins = {
   {
     'maxmx03/solarized.nvim',
-    branch = '5-change-background-without-restarting-neovim',
+    branch = 'dev',
     config = function()
-      local s = require 'solarized'
+      local solarized = require 'solarized'
 
-      s.setup {
+      solarized.setup {
         theme = 'neovim',
         transparent = false,
       }
 
-      local c = s.colors
+      local colors = solarized.colors
 
       lvim.builtin.bufferline.options = {
         mode = 'tabs',
@@ -23,22 +23,22 @@ lvim.plugins = {
 
       lvim.builtin.bufferline.highlights = {
         separator = {
-          fg = c.bg_alt,
-          bg = c.bg,
+          fg = colors.bg_alt,
+          bg = colors.bg,
         },
         separator_selected = {
-          fg = c.bg_alt,
+          fg = colors.bg_alt,
         },
         background = {
-          fg = c.fg_invert,
-          bg = c.bg,
+          fg = colors.fg_invert,
+          bg = colors.bg,
         },
         buffer_selected = {
-          fg = c.bg_invert,
+          fg = colors.bg_invert,
           bold = true,
         },
         fill = {
-          bg = c.bg_alt,
+          bg = colors.bg_alt,
         },
       }
     end,
