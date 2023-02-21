@@ -7,7 +7,39 @@ lvim.plugins = {
 
       solarized.setup {
         theme = 'neovim',
-        transparent = false,
+        transparent = true,
+      }
+
+      local colors = solarized.colors
+
+      lvim.builtin.bufferline.options = {
+        mode = 'tabs',
+        separator_style = 'slant',
+        always_show_bufferline = true,
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+        color_icons = true,
+      }
+
+      lvim.builtin.bufferline.highlights = {
+        separator = {
+          fg = colors.bg_alt,
+          bg = colors.bg,
+        },
+        separator_selected = {
+          fg = colors.bg_alt,
+        },
+        background = {
+          fg = colors.fg_invert,
+          bg = colors.bg,
+        },
+        buffer_selected = {
+          fg = colors.bg_invert,
+          bold = true,
+        },
+        fill = {
+          bg = colors.bg_alt,
+        },
       }
     end,
   },
