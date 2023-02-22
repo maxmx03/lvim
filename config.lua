@@ -1,3 +1,4 @@
+require 'autocmd'
 require 'functions'
 require 'formatters'
 require 'options'
