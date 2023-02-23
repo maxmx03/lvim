@@ -7,7 +7,7 @@ require 'keys'
 
 lvim.log.level = 'info'
 lvim.format_on_save = {
-  enabled = true,
+  enabled = false,
   pattern = '*.*',
   timeout = 1000,
 }
@@ -19,3 +19,13 @@ lvim.builtin.nvimtree.setup.view.side = 'left'
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.indentlines.active = false
+lvim.lsp.on_attach_callback = function(_, bufnr)
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+  vim.keymap.set('n', '<C-f>', vim.lsp.buf.format, bufopts)
+
+  vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged' }, {
+    buffer = bufnr,
+    command = 'update',
+  })
+end

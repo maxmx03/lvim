@@ -1,5 +1,9 @@
 lvim.leader = 'space'
-lvim.keys.normal_mode['<C-s>'] = ':w<cr>'
+lvim.keys.normal_mode['<C-s>'] = ':split<cr>'
+lvim.keys.normal_mode['<C-v>'] = ':vsplit<cr>'
+lvim.keys.normal_mode['+'] = '<C-a>'
+lvim.keys.normal_mode['-'] = '<C-x>'
+lvim.keys.normal_mode['<C-a>'] = 'gg<S-V>G'
 lvim.builtin.which_key.mappings['q'] = { '<cmd>lua smart_quit()<CR>', 'Quit' }
 lvim.builtin.which_key.mappings['lg'] = { '<cmd>Lspsaga goto_definition<CR>', 'Go to definition' }
 lvim.builtin.which_key.mappings['lp'] = { '<cmd>Lspsaga peek_definition<CR>', 'Peek definition' }
