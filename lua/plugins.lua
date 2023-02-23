@@ -89,4 +89,7 @@ lvim.plugins = {
     end,
     ft = { 'markdown' },
   },
+  {
+    'windwp/nvim-ts-autotag',
+  },
 }
