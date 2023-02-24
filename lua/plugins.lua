@@ -6,8 +6,8 @@ lvim.plugins = {
       local solarized = require 'solarized'
 
       solarized.setup {
-        theme = 'vscode',
-        transparent = false,
+        theme = 'neovim',
+        transparent = true,
       }
     end,
   },
