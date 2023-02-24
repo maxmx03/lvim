@@ -1,6 +1,6 @@
 lvim.leader = 'space'
-lvim.keys.normal_mode['<C-s>'] = ':split<cr>'
-lvim.keys.normal_mode['<C-v>'] = ':vsplit<cr>'
+lvim.keys.normal_mode['ss'] = ':split<cr>'
+lvim.keys.normal_mode['sv'] = ':vsplit<cr>'
 lvim.keys.normal_mode['+'] = '<C-a>'
 lvim.keys.normal_mode['-'] = '<C-x>'
 lvim.keys.normal_mode['<C-a>'] = 'gg<S-V>G'

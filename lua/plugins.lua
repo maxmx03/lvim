@@ -21,7 +21,6 @@ lvim.plugins = {
 
       local opts = { noremap = true, silent = true }
 
-      vim.keymap.set('n', 's', ':HopPattern<cr>', opts)
       vim.keymap.set('n', 'f', ':HopWord<cr>', opts)
     end,
   },
