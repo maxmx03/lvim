@@ -1,6 +1,6 @@
 lvim.plugins = {
   {
-    url = 'phaazon/hop.nvim',
+    'phaazon/hop.nvim',
     event = 'BufRead',
     config = function()
       local h = require 'hop'
@@ -13,7 +13,7 @@ lvim.plugins = {
     end,
   },
   {
-    url = 'ray-x/lsp_signature.nvim',
+    'ray-x/lsp_signature.nvim',
     config = function()
       local signature = require 'lsp_signature'
 
@@ -24,7 +24,7 @@ lvim.plugins = {
     end,
   },
   {
-    url = 'norcalli/nvim-colorizer.lua',
+    'norcalli/nvim-colorizer.lua',
     config = function()
       local colorizer = require 'colorizer'
 
@@ -48,7 +48,7 @@ lvim.plugins = {
     end,
   },
   {
-    url = 'glepnir/lspsaga.nvim',
+    'glepnir/lspsaga.nvim',
     branch = 'main',
     config = function()
       local saga = require 'lspsaga'
@@ -57,10 +57,10 @@ lvim.plugins = {
     end,
   },
   {
-    url = 'stevearc/dressing.nvim',
+    'stevearc/dressing.nvim',
   },
   {
-    url = 'nvim-treesitter/playground',
+    'nvim-treesitter/playground',
     config = function()
       local opts = { noremap = true, silent = true }
 
@@ -69,7 +69,7 @@ lvim.plugins = {
     end,
   },
   {
-    url = 'iamcco/markdown-preview.nvim',
+    'iamcco/markdown-preview.nvim',
     build = 'cd app && yarn',
     config = function()
       vim.g.mkdp_filetypes = { 'markdown' }
@@ -77,7 +77,7 @@ lvim.plugins = {
     ft = { 'markdown' },
   },
   {
-    url = 'windwp/nvim-ts-autotag',
+    'windwp/nvim-ts-autotag',
     config = function()
       local autotag = require 'nvim-ts-autotag'
 
@@ -85,7 +85,7 @@ lvim.plugins = {
     end,
   },
   {
-    url = 'nvim-neorg/neorg',
+    'nvim-neorg/neorg',
     build = ':Neorg sync-parsers',
     opts = {
       load = {
@@ -103,7 +103,7 @@ lvim.plugins = {
     dependencies = { { 'nvim-lua/plenary.nvim' } },
   },
   {
-    url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
     config = function()
       require('lsp_lines').setup()
     end,

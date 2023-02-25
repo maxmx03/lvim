@@ -82,4 +82,4 @@ lvim.lsp.on_attach_callback = function(_, bufnr)
     command = 'update',
   })
 end
-lvim.lsp.diagnostics.virtual_text = false
+lvim.lsp.diagnostics.virtual_text = true
