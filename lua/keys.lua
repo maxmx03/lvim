@@ -10,3 +10,5 @@ lvim.builtin.which_key.mappings['lp'] = { '<cmd>Lspsaga peek_definition<CR>', 'P
 lvim.builtin.which_key.mappings['la'] = { '<cmd>Lspsaga code_action<CR>', 'Code action' }
 lvim.builtin.which_key.mappings['lF'] = { '<cmd>Lspsaga lsp_finder<CR>', 'Finder' }
 lvim.builtin.which_key.mappings['lh'] = { '<cmd>Lspsaga hover_doc<CR>', 'Hover Doc' }
+lvim.builtin.which_key.mappings['nw'] = { '<cmd>Neorg workspace notes<cr>', 'Open neorg workspace' }
+-- lvim.builtin.which_key.mappings['nw'] = { '<cmd>Neorg workspace<cr>', 'Open neorg workspace' }

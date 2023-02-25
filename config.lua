@@ -11,7 +11,7 @@ lvim.format_on_save = {
   pattern = '*.*',
   timeout = 1000,
 }
-lvim.colorscheme = 'solarized'
+lvim.colorscheme = 'tokyonight-night'
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = 'dashboard'
 lvim.builtin.terminal.active = true
@@ -32,10 +32,10 @@ lvim.builtin.telescope.defaults.file_ignore_patterns = {
   -- "%.jpg",
   -- "%.jpeg",
   -- "%.png",
-  '%.svg',
-  '%.otf',
-  '%.ttf',
-  '%.webp',
+  -- '%.svg',
+  -- '%.otf',
+  -- '%.ttf',
+  -- '%.webp',
   '.dart_tool/',
   '.github/',
   '.gradle/',
@@ -82,3 +82,4 @@ lvim.lsp.on_attach_callback = function(_, bufnr)
     command = 'update',
   })
 end
+lvim.lsp.diagnostics.virtual_text = false

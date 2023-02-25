@@ -1,18 +1,6 @@
 lvim.plugins = {
   {
-    'maxmx03/solarized.nvim',
-    branch = 'dev',
-    config = function()
-      local solarized = require 'solarized'
-
-      solarized.setup {
-        theme = 'neovim',
-        transparent = true,
-      }
-    end,
-  },
-  {
-    'phaazon/hop.nvim',
+    url = 'phaazon/hop.nvim',
     event = 'BufRead',
     config = function()
       local h = require 'hop'
@@ -25,7 +13,7 @@ lvim.plugins = {
     end,
   },
   {
-    'ray-x/lsp_signature.nvim',
+    url = 'ray-x/lsp_signature.nvim',
     config = function()
       local signature = require 'lsp_signature'
 
@@ -36,7 +24,7 @@ lvim.plugins = {
     end,
   },
   {
-    'norcalli/nvim-colorizer.lua',
+    url = 'norcalli/nvim-colorizer.lua',
     config = function()
       local colorizer = require 'colorizer'
 
@@ -60,7 +48,7 @@ lvim.plugins = {
     end,
   },
   {
-    'glepnir/lspsaga.nvim',
+    url = 'glepnir/lspsaga.nvim',
     branch = 'main',
     config = function()
       local saga = require 'lspsaga'
@@ -69,10 +57,10 @@ lvim.plugins = {
     end,
   },
   {
-    'stevearc/dressing.nvim',
+    url = 'stevearc/dressing.nvim',
   },
   {
-    'nvim-treesitter/playground',
+    url = 'nvim-treesitter/playground',
     config = function()
       local opts = { noremap = true, silent = true }
 
@@ -81,7 +69,7 @@ lvim.plugins = {
     end,
   },
   {
-    'iamcco/markdown-preview.nvim',
+    url = 'iamcco/markdown-preview.nvim',
     build = 'cd app && yarn',
     config = function()
       vim.g.mkdp_filetypes = { 'markdown' }
@@ -89,11 +77,35 @@ lvim.plugins = {
     ft = { 'markdown' },
   },
   {
-    'windwp/nvim-ts-autotag',
+    url = 'windwp/nvim-ts-autotag',
     config = function()
       local autotag = require 'nvim-ts-autotag'
 
       autotag.setup()
-    end
+    end,
+  },
+  {
+    url = 'nvim-neorg/neorg',
+    build = ':Neorg sync-parsers',
+    opts = {
+      load = {
+        ['core.defaults'] = {}, -- Loads default behaviour
+        ['core.norg.concealer'] = {}, -- Adds pretty icons to your documents
+        ['core.norg.dirman'] = { -- Manages Neorg workspaces
+          config = {
+            workspaces = {
+              notes = '~/notes',
+            },
+          },
+        },
+      },
+    },
+    dependencies = { { 'nvim-lua/plenary.nvim' } },
+  },
+  {
+    url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    config = function()
+      require('lsp_lines').setup()
+    end,
   },
 }
