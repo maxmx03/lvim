@@ -13,13 +13,11 @@ lvim.format_on_save = {
 }
 
 lvim.colorscheme = 'doom-one'
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = 'dashboard'
+lvim.builtin.alpha.active = false
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = 'left'
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.auto_install = true
--- lvim.builtin.indentlines.active = false
 lvim.builtin.telescope.defaults.file_ignore_patterns = {
   '.git/',
   'target/',
@@ -84,4 +82,3 @@ lvim.lsp.on_attach_callback = function(_, bufnr)
   })
 end
 lvim.lsp.diagnostics.virtual_text = false
-lvim.builtin.alpha.active = false
