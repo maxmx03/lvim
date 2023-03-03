@@ -103,12 +103,6 @@ lvim.plugins = {
     dependencies = { { 'nvim-lua/plenary.nvim' } },
   },
   {
-    url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-    config = function()
-      require('lsp_lines').setup()
-    end,
-  },
-  {
     'NTBBloodbath/doom-one.nvim',
     config = function()
       vim.g.doom_one_plugin_neorg = true
