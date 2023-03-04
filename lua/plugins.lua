@@ -103,103 +103,15 @@ lvim.plugins = {
     dependencies = { { 'nvim-lua/plenary.nvim' } },
   },
   {
-    'NTBBloodbath/doom-one.nvim',
+    'maxmx03/solarized.nvim',
     config = function()
-      vim.g.doom_one_plugin_neorg = true
-      vim.g.doom_one_plugin_barbar = false
-      vim.g.doom_one_plugin_telescope = true
-      vim.g.doom_one_plugin_neogit = true
-      vim.g.doom_one_plugin_nvim_tree = true
-      vim.g.doom_one_plugin_dashboard = true
-      vim.g.doom_one_plugin_startify = false
-      vim.g.doom_one_plugin_whichkey = true
-      vim.g.doom_one_plugin_indent_blankline = true
-      vim.g.doom_one_plugin_vim_illuminate = true
-      vim.g.doom_one_plugin_lspsaga = true
-    end,
-  },
-  {
-    'glepnir/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      local dashboard = require 'dashboard'
-      local colors = {
-        header = '#586268',
-        center = '#51afef',
-        shortcut = '#a9a1e1',
-        footer = '#586268',
-      }
+      local solarized = require 'solarized'
 
-      dashboard.setup {
-        theme = 'doom',
+      solarized:setup {
         config = {
-          header = {
-            '                                                                              ',
-            '=================     ===============     ===============   ========  ========',
-            '\\\\ . . . . . . .\\\\   //. . . . . . .\\\\   //. . . . . . .\\\\  \\\\. . .\\\\// . . //',
-            '||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\\/ . . .||',
-            '|| . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||',
-            '||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||',
-            '|| . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\\ . . . . ||',
-            "||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\\_ . .|. .||",
-            '|| . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\\ `-_/| . ||',
-            "||_-' ||  .|/    || ||    \\|.  || `-_|| ||_-' ||  .|/    || ||   | \\  / |-_.||",
-            "||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \\  / |  `||",
-            "||    `'         || ||         `'    || ||    `'         || ||   | \\  / |   ||",
-            "||            .===' `===.         .==='.`===.         .===' /==. |  \\/  |   ||",
-            "||         .=='   \\_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \\/  |   ||",
-            "||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \\/  |   ||",
-            "||   .=='    _-'          `-__\\._-'         `-_./__-'         `' |. /|  |   ||",
-            "||.=='    _-'                                                     `' |  /==.||",
-            "=='    _-'                        N E O V I M                         \\/   `==",
-            "\\   _-'                                                                `-_   /",
-            " `''                                                                      ``'  ",
-            '                                                                               ',
-            '                                                                               ',
-            '                                                                               ',
-          },
-          center = {
-            {
-              icon = lvim.icons.ui.FindFile .. ' ',
-              desc = 'Find File           ',
-              key = 'f',
-              action = 'Telescope find_files',
-            },
-            {
-              icon = lvim.icons.ui.NewFile .. ' ',
-              desc = 'New File',
-              key = 'n',
-              action = 'ene!',
-            },
-            {
-              icon = lvim.icons.ui.Project .. ' ',
-              desc = 'Projects',
-              key = 'p',
-              action = 'Telescope projects',
-            },
-            {
-              icon = lvim.icons.ui.History .. ' ',
-              desc = 'Recent files',
-              key = 'r',
-              action = 'Telescope oldfiles',
-            },
-            {
-              icon = lvim.icons.ui.FindText .. ' ',
-              desc = 'Recent Text',
-              key = 't',
-              action = 'Telescope live_grep',
-            },
-          },
-          footer = { '', 'Doom Nvim loaded' },
+          theme = 'vscode',
         },
       }
-
-      vim.api.nvim_set_hl(0, 'DashboardHeader', { fg = colors.header })
-      vim.api.nvim_set_hl(0, 'DashboardDesc', { fg = colors.center })
-      vim.api.nvim_set_hl(0, 'DashboardIcon', { fg = colors.center })
-      vim.api.nvim_set_hl(0, 'DashboardKey', { fg = colors.shortcut })
-      vim.api.nvim_set_hl(0, 'DashboardFooter', { fg = colors.footer })
-      vim.api.nvim_set_hl(0, 'NvimTreeFolderIcon', { fg = '#51afef' })
     end,
   },
 }

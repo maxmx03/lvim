@@ -1,6 +1,7 @@
 require 'autocmd'
 require 'functions'
 require 'formatters'
+require 'linters'
 require 'options'
 require 'plugins'
 require 'keys'
@@ -12,8 +13,7 @@ lvim.format_on_save = {
   timeout = 1000,
 }
 
-lvim.colorscheme = 'doom-one'
-lvim.builtin.alpha.active = false
+lvim.colorscheme = 'caelum'
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = 'left'
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
@@ -81,3 +81,4 @@ lvim.lsp.on_attach_callback = function(_, bufnr)
     command = 'update',
   })
 end
+lvim.builtin.indentlines.active = false

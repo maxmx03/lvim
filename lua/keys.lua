@@ -13,3 +13,4 @@ lvim.builtin.which_key.mappings['lh'] = { '<cmd>Lspsaga hover_doc<CR>', 'Hover D
 lvim.builtin.which_key.mappings['nw'] = { '<cmd>Neorg workspace notes<cr>', 'Open Neorg Workspace' }
 lvim.builtin.which_key.mappings['nr'] = { '<cmd>Neorg return<cr>', 'Return Neorg' }
 lvim.builtin.which_key.mappings['nn'] = { '<cmd>Neorg toggle-concealer<cr>', 'Toggle Concealer' }
+lvim.builtin.which_key.mappings['t'] = { '<cmd>ToggleTerm<CR>', 'Open Terminal' }
