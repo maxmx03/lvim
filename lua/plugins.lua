@@ -89,9 +89,9 @@ lvim.plugins = {
     build = ':Neorg sync-parsers',
     opts = {
       load = {
-        ['core.defaults'] = {}, -- Loads default behaviour
-        ['core.norg.concealer'] = {}, -- Adds pretty icons to your documents
-        ['core.norg.dirman'] = { -- Manages Neorg workspaces
+            ['core.defaults'] = {},   -- Loads default behaviour
+            ['core.norg.concealer'] = {}, -- Adds pretty icons to your documents
+            ['core.norg.dirman'] = {  -- Manages Neorg workspaces
           config = {
             workspaces = {
               notes = '~/notes',
@@ -103,15 +103,9 @@ lvim.plugins = {
     dependencies = { { 'nvim-lua/plenary.nvim' } },
   },
   {
-    'maxmx03/solarized.nvim',
-    config = function()
-      local solarized = require 'solarized'
-
-      solarized:setup {
-        config = {
-          theme = 'vscode',
-        },
-      }
-    end,
+    'folke/zen-mode.nvim',
+  },
+  {
+    'maxmx03/caelum',
   },
 }
