@@ -89,9 +89,9 @@ lvim.plugins = {
     build = ':Neorg sync-parsers',
     opts = {
       load = {
-            ['core.defaults'] = {},   -- Loads default behaviour
-            ['core.norg.concealer'] = {}, -- Adds pretty icons to your documents
-            ['core.norg.dirman'] = {  -- Manages Neorg workspaces
+        ['core.defaults'] = {}, -- Loads default behaviour
+        ['core.norg.concealer'] = {}, -- Adds pretty icons to your documents
+        ['core.norg.dirman'] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
               notes = '~/notes',
@@ -107,5 +107,26 @@ lvim.plugins = {
   },
   {
     'maxmx03/caelum',
+  },
+  {
+    'folke/noice.nvim',
+    config = function()
+      local noice = require 'noice'
+
+      noice.setup {
+        lsp = {
+          signature = {
+            enabled = false,
+          },
+          hover = {
+            enabled = false
+          }
+        },
+      }
+    end,
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    },
   },
 }
