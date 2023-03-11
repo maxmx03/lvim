@@ -12,7 +12,6 @@ lvim.format_on_save = {
   pattern = '*.*',
   timeout = 1000,
 }
-
 lvim.colorscheme = 'caelum'
 lvim.builtin.lualine.options.theme = 'caelum'
 lvim.builtin.terminal.active = true
