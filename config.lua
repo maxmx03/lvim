@@ -13,7 +13,6 @@ lvim.format_on_save = {
   timeout = 1000,
 }
 lvim.colorscheme = 'caelum'
-lvim.builtin.lualine.options.theme = 'caelum'
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = 'left'
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
