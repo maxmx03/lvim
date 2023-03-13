@@ -111,7 +111,12 @@ lvim.plugins = {
   {
     'folke/noice.nvim',
     config = function()
+      local notify = require 'notify'
       local noice = require 'noice'
+
+      notify.setup {
+        top_down = false,
+      }
 
       noice.setup {
         lsp = {
@@ -119,8 +124,8 @@ lvim.plugins = {
             enabled = false,
           },
           hover = {
-            enabled = false
-          }
+            enabled = false,
+          },
         },
       }
     end,
