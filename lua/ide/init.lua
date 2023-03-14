@@ -1,0 +1,9 @@
+_G.ide = {}
+ide.colorscheme = 'caelum'
+ide.plugins = {}
+ide.maps = {}
+ide.servers = {}
+ide.formattings = {}
+ide.completions = {}
+ide.code_actions = {}
+ide.hovers = {}
