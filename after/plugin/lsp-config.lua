@@ -1,17 +1,17 @@
 local lsp = require 'lspconfig'
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
 
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
+  local hl = 'DiagnosticSign' .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = {
     prefix = '●',
-  }
-})
+  },
+}
 
 local on_attach = function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -32,24 +32,23 @@ for _, server in ipairs(ide.servers) do
       settings = {
         lua = {
           completion = {
-            callSnippet = "Replace"
-
-          }
-        }
+            callSnippet = 'Replace',
+          },
+        },
       },
       on_attach = on_attach,
       flags = {
-        debounce_text_changes = 150
+        debounce_text_changes = 150,
       },
-      capabilities = capabilities
+      capabilities = capabilities,
     }
   else
     lsp[server].setup {
       on_attach = on_attach,
       flags = {
-        debounce_text_changes = 150
+        debounce_text_changes = 150,
       },
-      capabilities = capabilities
+      capabilities = capabilities,
     }
   end
 end

@@ -14,8 +14,8 @@ ide.plugins = {
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
-      'nvim-lua/plenary.nvim'
-    }
+      'nvim-lua/plenary.nvim',
+    },
   },
   {
     'williamboman/mason.nvim',
@@ -26,7 +26,7 @@ ide.plugins = {
     },
   },
   {
-    'nvim-treesitter/nvim-treesitter'
+    'nvim-treesitter/nvim-treesitter',
   },
   {
     'windwp/nvim-ts-autotag',
@@ -43,17 +43,17 @@ ide.plugins = {
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-vsnip',
       'hrsh7th/vim-vsnip',
-    }
+    },
   },
   {
-    'jose-elias-alvarez/null-ls.nvim'
+    'jose-elias-alvarez/null-ls.nvim',
   },
   {
-    "folke/noice.nvim",
+    'folke/noice.nvim',
     dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    }
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    },
   },
   {
     'nvim-neorg/neorg',
@@ -87,6 +87,10 @@ ide.plugins = {
     event = 'BufRead',
   },
   {
-    'glepnir/galaxyline.nvim'
-  }
+    'glepnir/galaxyline.nvim',
+  },
+  {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+  },
 }

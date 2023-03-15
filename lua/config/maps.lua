@@ -14,8 +14,8 @@ ide.maps = {
     name = 'Neorg',
     w = { '<cmd>Neorg workspace notes<cr>', 'Open Neorg Workspace' },
     r = { '<cmd>Neorg return<cr>', 'Return Neorg' },
-    n = { '<cmd>Neorg toggle-concealer<cr>', 'Toggle Concealer' }
-  }
+    n = { '<cmd>Neorg toggle-concealer<cr>', 'Toggle Concealer' },
+  },
 }
 
 local opts = { noremap = true, silent = true }
